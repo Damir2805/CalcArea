@@ -7,6 +7,7 @@ namespace CalcArea
         static void Main(string[] args)
         {
             CalcTriangle(); // Here methods are called
+            CalcCircle();
         }
 
         /*All the methods are defined here*/
@@ -33,6 +34,19 @@ namespace CalcArea
 
             Console.WriteLine($"площадь треугольника равна {area} кв. {mes}");
 
+        }
+
+        static void CalcCircle()
+        {
+            Console.WriteLine("Введите диаметр окружности");
+            double d = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Введите единицы измерения");
+            string mes = Console.ReadLine();
+
+            double area = (3.14 * d * d) / 4;
+
+            Console.WriteLine($"площадь круга равна {area} кв. {mes}");
         }
     }
 }
